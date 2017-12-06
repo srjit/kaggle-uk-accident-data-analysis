@@ -13,7 +13,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contains initial set of exploratory data analysis.  <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For more details please refer: [code/python/exploratory-data-analysis/eda-1/README.md](EDA-Python-1)  <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(1.3) SAS  <br/>
-		      
       2. reports  <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;(1.1) update-1  <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- documentation for first project update   <br/>
