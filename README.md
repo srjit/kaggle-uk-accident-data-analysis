@@ -3,9 +3,7 @@
 
 * Exploratory data analysis and application of Unsupervised ML algorithms to uncover patterns in Kaggle's UK Accidents data
   	      
-  	      ** Dataset:
-
-	      	 [UK Accident Data](https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales)
+  	      Dataset: [UK Accident Data](https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales)
 
 * The repository is organized as:
       
