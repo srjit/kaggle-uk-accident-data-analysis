@@ -6,7 +6,6 @@
 * Dataset: [UK Accident Data](https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales)
 
 * The repository is organized as:
-      
       1. code
 		(1.1) R
 		(1.2) python
