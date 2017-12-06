@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+# data folders
+code/python/exploratory-data-analysis/eda-1/data
