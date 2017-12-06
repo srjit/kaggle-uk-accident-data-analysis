@@ -7,12 +7,12 @@
 
 * The repository is organized as: <br/>
       1. code  <br/>
-		(1.1) R  <br/>
-		(1.2) python  <br/>
-		     (1.2.1) eda-1  <br/>
-			- Contains initial set of exploratory data analysis.  <br/>
-			  For more details please refer: [code/python/exploratory-data-analysis/eda-1/README.md](EDA-Python-1)  <br/>
-		(1.3) SAS  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(1.1) R  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(1.2) python  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(1.2.1) eda-1  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contains initial set of exploratory data analysis.  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For more details please refer: [code/python/exploratory-data-analysis/eda-1/README.md](EDA-Python-1)  <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(1.3) SAS  <br/>
 		      
       2. reports  <br/>
 		(1.1) update-1  <br/>
