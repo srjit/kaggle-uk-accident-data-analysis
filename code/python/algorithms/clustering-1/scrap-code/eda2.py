@@ -62,10 +62,3 @@ data["city"] = data.apply(lambda x: attach_city(x), axis=1)
 
 ## Consider London
 data_london = data[data['city'] == 'London']
-
-
-
-
-
-
-

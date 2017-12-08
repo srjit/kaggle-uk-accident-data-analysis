@@ -67,17 +67,6 @@ cluster_1 = motor_vehicles[motor_vehicles.cluster_assigned == 1]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## visualize the clusers
 ## we have the details of 1837 roads - let's visualize this
 from sklearn import decomposition
