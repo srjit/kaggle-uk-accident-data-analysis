@@ -8,7 +8,7 @@ library(klaR)      #k-modes algorithm
 library(cluster)   #Distance metrics for categorical data
 
 ############ Reading in the data ############
-data1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv", 
+data1 <- read_csv("data/accidents_2009_to_2011.csv", 
                   col_types = cols(`1st_Road_Class` = col_character(), 
                                    `1st_Road_Number` = col_character(), 
                                    `2nd_Road_Class` = col_character(), 
@@ -23,7 +23,7 @@ data1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv",
                                    Urban_or_Rural_Area = col_character(), 
                                    Year = col_skip()))
 
-data2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv", 
+data2 <- read_csv("data/accidents_2012_to_2014.csv", 
                   col_types = cols(`1st_Road_Class` = col_character(), 
                                    `1st_Road_Number` = col_character(), 
                                    `2nd_Road_Class` = col_character(), 
@@ -40,40 +40,40 @@ data2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv",
 
 full_data <- rbind.data.frame(data1, data2)
 
-londonEN1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv",
+londonEN1 <- read_csv("data/accidents_2009_to_2011.csv",
                       col_types = cols_only(Location_Easting_OSGR = col_guess(),
                                             Location_Northing_OSGR = col_guess()))
 
-londonEN2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv",
+londonEN2 <- read_csv("data/accidents_2012_to_2014.csv",
                       col_types = cols_only(Location_Easting_OSGR = col_guess(),
                                             Location_Northing_OSGR = col_guess()))
 
 londonEN <- rbind.data.frame(londonEN1,londonEN2)
 
-latlon1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv",
+latlon1 <- read_csv("data/accidents_2009_to_2011.csv",
                     col_types = cols_only(Latitude = col_guess(),
                                           Longitude = col_guess()))
 
-latlon2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv",
+latlon2 <- read_csv("data/accidents_2012_to_2014.csv",
                     col_types = cols_only(Latitude = col_guess(),
                                           Longitude = col_guess()))
 
 latlons <- rbind.data.frame(latlon1,latlon2)
 aaaaa <- cbind.data.frame(full_data,latlons)
 
-years1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv",
+years1 <- read_csv("data/accidents_2009_to_2011.csv",
                    col_types = cols_only(Year = col_guess()))
 
-years2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv",
+years2 <- read_csv("data/accidents_2012_to_2014.csv",
                    col_types = cols_only(Year = col_guess()))
 
 full_years <- rbind.data.frame(years1, years2)
 
-EN1 <- read_csv("~/Desktop/Project/accidents_2009_to_2011.csv",
+EN1 <- read_csv("data/accidents_2009_to_2011.csv",
                 col_types = cols_only(Location_Easting_OSGR = col_guess(),
                                       Location_Northing_OSGR = col_guess()))
                 
-EN2 <- read_csv("~/Desktop/Project/accidents_2012_to_2014.csv",
+EN2 <- read_csv("data/accidents_2012_to_2014.csv",
                 col_types = cols_only(Location_Easting_OSGR = col_guess(),
                                       Location_Northing_OSGR = col_guess()))
 
@@ -88,16 +88,16 @@ rm(data1,data2,latlon1,latlon2,years1,years2, EN1, EN2)
 ############################# SUBSET BY LOCATION SHAPEFILE #############################
 
 ### UK ###
-lnd2 <- readOGR(dsn = "/Users/adwaitsahasrabhojanee/Downloads/ne_50m_admin_0_countries", 
+lnd2 <- readOGR(dsn = "data", 
                 layer = "ne_50m_admin_0_countries")
 UK <- lnd2[lnd2$NAME=="United Kingdom",]
 plot(UK)
-lnd1 <- readOGR(dsn = "/Users/adwaitsahasrabhojanee/Downloads/Distribution", 
+lnd1 <- readOGR(dsn = "data", 
                layer = "Areas")
 plot(lnd2)
 
 ### London ###
-lnd <- readOGR(dsn = "/Users/adwaitsahasrabhojanee/Downloads/statistical-gis-boundaries-london/ESRI", 
+lnd <- readOGR(dsn = "data", 
                layer = "London_Borough_Excluding_MHW")
 EN_spatial <- SpatialPoints(cbind(full_EN$Location_Easting_OSGR,full_EN$Location_Northing_OSGR), CRS(proj4string(lnd)))
 ENsub <- spTransform(EN_spatial, CRS(proj4string(lnd))) # transform CRS
@@ -409,9 +409,6 @@ ggplot() + geom_path(aes(long,lat, group = group),data = fort) +
   geom_point(aes(long, lat, col = as.factor(km$cluster)),
              data = london[london_years=='2009',],
              size = 0.1, alpha = 1) + 
-  ##geom_point(aes(Longitude, Latitude),
-  #           data = londonENa[km$cluster == 3,],
-  #           size = 0.0001, alpha = 0.35, color = 'cyan2') + 
   theme_bw() +
   theme(axis.line = element_blank(),
         axis.text.x=element_blank(),
@@ -431,9 +428,6 @@ ggplot() + geom_path(aes(long,lat, group = group),data = fort) +
 table(km$cluster)
 
 db <- dbscan(scaled_pca_data, eps = 2, MinPts = 300)
-
-
-
 
 ##########################################
 #FULL
