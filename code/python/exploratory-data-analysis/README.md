@@ -7,5 +7,5 @@
   4) json
   
 #### Notebook
-  1) [Accidents - EDA](EDA - Analysis of external factors.ipynb)
+  1) [Accidents - EDA](analysis-of-external-factors.ipynb)
      

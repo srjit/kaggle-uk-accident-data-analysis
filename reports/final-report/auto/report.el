@@ -21,7 +21,10 @@
     "graphicx"
     "subcaption"
     "caption"
-    "floatrow"
-    "comment"))
+    "comment")
+   (LaTeX-add-labels
+    "fig:frequency"
+    "fig:hour-study"
+    "fig:day_study"))
  :latex)
 
