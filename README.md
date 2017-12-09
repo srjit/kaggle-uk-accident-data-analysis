@@ -19,6 +19,7 @@
       - exploratory-data-analysis
           For more details please refer: [EDA-Python-1](code/python/exploratory-data-analysis/README.md)
       - algorithms
+          For more details on the algorithms used for the analysis please refer: [Algorithms and Techniques](code/python/algorithms/README.md)
 
 
     * SAS  

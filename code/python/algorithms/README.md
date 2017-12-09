@@ -10,7 +10,7 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 
 ### Folder Organization
 
- -  htmls   	  :  Since the map outputs do not render on github, html output documents of previous successful runs  
+ -  htmls   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
          	    have been placed here as a demo.  
  - scrap-code     : Intermediate scrap code used in analysis 
  - address_list_x : These files are address from geo-tags in json format. Since most service providers restrict
