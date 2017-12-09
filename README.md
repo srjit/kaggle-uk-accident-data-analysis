@@ -4,10 +4,12 @@
 * Exploratory data analysis and application of Unsupervised ML algorithms to uncover patterns in Kaggle's UK Accidents data
   	      
 ## Dataset:
-	[UK Accident Data](https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales)
+	
+	- [UK Accident Data](https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales)
 
 ## Project Structure:
-     - code  
+   	   
+     1. code  
       	  * R  
 	     - full_A.R  
 			     Contains R code for geospatial manipulation, PCA, clustering, and plotting clusters and results of PCA.  
@@ -21,7 +23,7 @@
 
 	   * SAS  
 
-     - reports
+     2. reports
        	 
 	   * update-1  
 	       - documentation for first project update   
