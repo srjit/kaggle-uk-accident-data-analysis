@@ -11,14 +11,14 @@
    	   
 1. code  
     * R  
- - full_A.R  
-   Contains R code for geospatial manipulation, PCA, clustering, and plotting clusters and results of PCA.  
-   For more details please refer: [R Readme](https://github.com/srjit/kaggle-uk-accident-data-analysis/blob/master/code/R/readme.md)  
+      - full_A.R  
+      	  Contains R code for geospatial manipulation, PCA, clustering, and plotting clusters and results of PCA.  
+	  For more details please refer: [R Readme](https://github.com/srjit/kaggle-uk-accident-data-analysis/blob/master/code/R/readme.md)  
 
    * python  
-     + eda-1
-   For more details please refer: [EDA-Python-1](code/python/exploratory-data-analysis/README.md)
-     +
+      - exploratory-data-analysis
+          For more details please refer: [EDA-Python-1](code/python/exploratory-data-analysis/README.md)
+      - algorithms
 
 
     * SAS  
@@ -26,9 +26,9 @@
 2. reports
     
     * update-1  
-   - documentation for first project update   
+      - documentation for first project update   
     * update-2  
-   - documentation for second project update  
+      - documentation for second project update  
     * update-3  
-   - documentation for final project update  
+      - documentation for final project update  
 
