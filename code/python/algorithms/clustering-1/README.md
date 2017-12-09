@@ -12,6 +12,7 @@
 	- htmls : Since the map outputs do not render on github, html output documents of previous successful runs  
 	      have been placed here as a demo.  
 	- scrap-code : Intermediate scrap code used in analysis 
-	- address_list_x : These files are address from geo-tags in json format. Since most service providers restrict <br>
-	   		  decoding geo to address api limits to ~ 2000 calls per day, the decoded addresses have been cached <br>
-			  and kept in these files.  
+	- address_list_x : These files are address from geo-tags in json format. Since most service providers restrict
+	   		  decoding geo to address api limits to ~ 2000 calls per day, the decoded addresses have been cached 
+			  and kept in these files.
+			      
