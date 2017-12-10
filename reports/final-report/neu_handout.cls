@@ -50,7 +50,7 @@
 	
 	\thispagestyle{empty}
 	\pagestyle{myheadings}
-	\markright{\textit{{\myCourseCode, \@date, \@author} -- {\@title}}}
+	\markright{\textit{{\myCourseCode} -- {\@title}}}
 }
 
 \AtBeginDocument{\maketitle}
