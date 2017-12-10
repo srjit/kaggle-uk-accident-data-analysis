@@ -132,12 +132,44 @@ We then clustered the data using the first six components using DBSCAN, using a 
     \end{center}
 \end{figure}
 
-We removed the 'Police Force' variable, and repeated the clustering experiments. Unfortunately, the results were not fruitful. This could be because of the fact that although the number of records are quite high, there are not a large number of unique values that its numeric variables could take. For example, Accident Severity could only take a value of 1, 2 or 3. We then decide to instead focus on some of the nominal variables.
+We removed the 'Police Force' variable, and repeated the clustering experiments. Unfortunately, the results were not fruitful. This could be because of the fact that although the number of records are quite high, there are not a large number of unique values that its numeric variables could take. For example, Accident Severity could only take a value of 1, 2 or 3. We then decide to instead focus on some of the nominal variables. \\
 
 \subsection{Road and Lighting Conditions}
 
-  
+We discovered that the majority of accidents happen either in the daylight or when the street lights are present and lit in the darkness [Figure 4]. Additionally, looking over the conditions of the surface of the roads during the accidents, we see that a very large number of accidents occur on dry roads. Also, we noticed that around 20\% of the total number of accidents every year in Greater London happen when the roads are wet and damp. However, Greater London receives most of its rain during the months of Oct - Jan[4], and there is a chance that 20\% of accidents occur when the roads are wet because roads are wet 20\% of the time. Exploring the surface conditions in Greater London during different months, we found that accidents on wet roads are present throughout the year.\\
+
+We clustered the accidents based on Road Surface Conditions, Carriageway Hazards, Special Conditions at Site, and Light Conditions, which were all nominal variables. We used the \textit{Dice co-efficient} as a distance metric for these columns, and then clustered them using the \textit{k-medoids algorithm}. K-medoids works much the same way as k-means, but with a couple of differences. Unlike k-means, k-medoids always selects data points as the centers, for every iteration. This makes it a viable option for nominal data, as clustering around a point that does not exist in the dataset only makes sense for continuous or ordinal variables. Also, k-medoids uses the Manhattan Distance, and not the Euclidean Distance, as is common in k-means [6]. The silhouette was computed for k = 2 to 10, and a k of 4 was chosen [Figure 10], having a silhouette of 0.95. \\
+
+Visualizing a few data points from each cluster, it can be seen that the Light Conditions and Road Surface Conditions variables have been given importance by the clustering algorithm, and the four clusters are four combinations of these two variables [Figure 12]. Below are the accidents belonging to each cluster plotted on maps. \\ 
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[height=9cm, scale=0.01,keepaspectratio]{4_clusters.png}
+      \caption{Clustering for Road and Lighting conditions}
+    \end{center}
+\end{figure}
+
+The plots of the four clusters show that two of the clusters (red and orange) contain a much higher \textit{proportion} of accidents that occurred away from Downtown London than the other two clusters. \\
+
+
+As can be seen in Figure 12, the common important variable between these clusters is the road surface condition. It would seem from this clustering that a Wet/Damp road has a higher chance of causing an accident as you move away the heart of the city. \\ 
+
+A possible explanation for this could be the increase in speed limit as you head out of downtown London [Figure 13]. People going faster on wet roads would have a higher chance of losing control of their car. The accidents caused outside of Downtown London might be reduced if the speed limit was lowered in rainy months. \\
+
+
 \section{References}
+ [1] \href{https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london}{London Shapefile}
+ \newline
+ [2] \href{http://www.naturalearthdata.com} {UK Shapefile}
+ \newline
+ [3] \href{https://en.wikipedia.org/wiki/Demography_of_the_United_Kingdom}{Demography of the United Kingdom}
+ \newline
+ [4] \href{http://projectbritain.com/climate.html}{London Yearly Rainfall Distribution}
+ \newline
+ [5] \href{https://en.wikipedia.org/wiki/Great_Britain_road_numbering_scheme}{Great Britain road numbering scheme}
+ \newline
+ [6] \href{https://en.wikipedia.org/wiki/K-medoids}{k-medoids}
+
 
 \pagebreak
 \section{Appendix}
