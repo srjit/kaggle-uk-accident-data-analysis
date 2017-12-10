@@ -109,6 +109,36 @@ Examining the clusters, we could see that the density of traffic in spots belong
 \end{figure}
 
 
+
+\subsection{Segregation of Accidents in London using numeric attributes}
+
+Our dataset has seven variables that are either ordinal or binary. Using \textit{k-means} and \textit{DBSCAN} we performed clustering on these variables, segregate accidents and interpret the clusters. Our motivation for doing this was to look at a large cluster, and figure out the causes of the accidents in the largest cluster and suggest a solution to reduce the accidents in the entire cluster. \\
+
+Prior to DBSCAN, we applied Principal Component Analysis to reduce the time it takes to converge.   The first six components explained about 95\% of the variance. We thus managed to lower the number of dimensions by 1. \\
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[height=6cm,keepaspectratio]{pca.png}
+      \caption{Cumulative Proportion of Variance Explained by Principal Components}
+    \end{center}
+ \end{figure}
+
+We then clustered the data using the first six components using DBSCAN, using a variety of different parameter combinations. For a large range of parameters, DBSCAN clustered the data into two clusters, depending on whether they are from Downtown London or the surrounding boroughs [Figure 8]. Upon further exploration, we discovered that one of the variables - Police Force, was very high for accidents in Downtown London, and very low everywhere else. \\
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[height=5cm, keepaspectratio]{db_1_county.png}
+      \caption{DBSCAN Clustering on Numeric Columns Separates One Borough from the Others (Cluster 0 indicates Outliers)}
+    \end{center}
+\end{figure}
+
+We removed the 'Police Force' variable, and repeated the clustering experiments. Unfortunately, the results were not fruitful. This could be because of the fact that although the number of records are quite high, there are not a large number of unique values that its numeric variables could take. For example, Accident Severity could only take a value of 1, 2 or 3. We then decide to instead focus on some of the nominal variables.
+
+\subsection{Road and Lighting Conditions}
+
+  
+\section{References}
+
 \pagebreak
 \section{Appendix}
 \begin{figure}[!htb]
@@ -127,7 +157,21 @@ Examining the clusters, we could see that the density of traffic in spots belong
 \caption{Accident Severity and Population Density in different regions in the UK}  
 \end{figure}
 
-\section{References}
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[height=2.75cm,width=17cm]{cluster-eg.png}
+      \caption{Examples of Clustered Datapoints for Road and Lighting conditions}
+    \end{center}
+\end{figure}
+
+
+\begin{figure}[!htb]
+    \begin{center}
+      \includegraphics[height=7cm,keepaspectratio]{sl_london.png}
+      \caption{Accidents by Speed Limit (Excluding the Ubiquitous Speed Limit of 30)}
+    \end{center}
+\end{figure}
+
 
 \end{document}
 
