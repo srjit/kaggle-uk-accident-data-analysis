@@ -1,4 +1,3 @@
-
 \documentclass{neu_handout}
 \usepackage{url}
 \usepackage{amssymb}
@@ -61,17 +60,52 @@ Looking into the summary statistics of the data, we realized that most accidents
 
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
-  \includegraphics[width=.9\linewidth]{counts.png}
+  \includegraphics[height=3.80cm, width=.9\linewidth]{counts.png}
   \caption{Frequency of Accidents}\label{fig:frequency}
 \endminipage\hfill
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{hour-study.png}
   \caption{Hourly variations}\label{fig:hour-study}
 \endminipage\hfill
-\minipage{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{day-study.png}
+\minipage{0.32\textwidth}
+  \includegraphics[height=3.75cm, width=\linewidth]{day-study.png}
   \caption{Daily trends}\label{fig:day_study}
 \endminipage
+\end{figure}
+
+Considering that there are UK  has four distinct seasons with significant variations in climate, we were inclined to check the possibility of skew in the distribution of accidents across seasons
+and light conditions. \\
+
+\begin{figure}[!htb]
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth]{weather-study.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[width=\linewidth]{lighting-study.png}
+  \endminipage
+\caption{Trends in accidents - Weather and Lightning conditions}  
+\end{figure}
+
+From the plots, we conclude that the number of accidents that happen during perfectly good weather are much higher in count compared to the conditions which could possibly affect the normal traveling conditions adversely. In addition, it is seen that the count of accidents in daylight are far more than the rest. This analysis makes it evident that neither of these two is the root cause of accidents. \\
+
+Moving forward from this point, we narrowed our focus to metropolitan cities in the United Kingdom. This is because for every clustering or algorithm that we used to analyze the data, the results converged into two regions - urban or rural. We realized that this is because of the large differences in values of attributes in urban and rural areas (Appendix:Figure 5). Since London consistently  tops in the frequency of accidents and in search of more interesting results, we chose it to be the candidate region for our analysis.
+
+\section{Investigation of Patterns in Traffic - London}
+Streets in the UK are uniquely identified by an alpha-numeric numbering scheme[6]. Concatenating this identifier with the Northing and Easting co-ordinates makes a good marker for us to uniquely identify an accident spot or a street fragment without losing information about the street. The Annual Average Daily Flow (AADF) of traffic was analyzed to cluster the traffic dense regions in London. \\
+
+Road fragments with similar characteristics in traffic were identified though cluster analysis.
+\textit{K-means} was our candidate algorithm. Variables that quantify traffic of a region were manually selected, which included number of motor cycles, number of taxis, and the number bus coaches. The  experiment was performed with same parameters for every year between 2009 and 2014 to study the variations in areas with high traffic density. \textit{Silhouette method} was used to determine the optimal number of clusters, which was discovered to be two [Figure 7].\\
+
+Examining the clusters, we could see that the density of traffic in spots belonging to one of the clusters is very high compared to the ones in the second cluster. The co-ordinates of points belonging to this cluster was dropped on a map and it turns out they are very close to each other. We plotted yearly heatmaps of accidents to study how they correlate with the traffic flow plots. It can be observed that there is a positive correlation between the hotspots where traffic density is the highest and the number of accidents. In other words, high traffic flow zones in London are also accident prone areas. To illustrate this at one of the locations, consider the map segment which shows the traffic flow density on street A41 between Edgware Road(Circle District and Hammersmith \& City) and Baker Street[Figure 8,9]. This could be an indication that the traffic dense hotspots are not equipped enough to contain the traffic. \\
+
+\begin{figure}[!htb]
+\minipage{0.5\textwidth}
+  \includegraphics[height=6cm, width=\linewidth]{traffic-bakers-street.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[height=6cm, width=\linewidth]{accident-2009-heatmap-bakers-street.png}
+  \endminipage
+\caption{Traffic density and accident spot correlation - Marylebone Road, London}  
 \end{figure}
 
 
@@ -81,6 +115,18 @@ Looking into the summary statistics of the data, we realized that most accidents
   \includegraphics[width=8cm, height=10cm]{vehicles-by-county.png}
   \caption{Frequency of vehicles per county}
 \end{figure}
+
+
+\begin{figure}[!htb]
+\minipage{0.5\textwidth}
+  \includegraphics[height=10cm,width=0.8\linewidth]{accident-severity.png}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+  \includegraphics[height=10cm,width=0.8\linewidth]{population-density.png}
+  \endminipage
+\caption{Accident Severity and Population Density in different regions in the UK}  
+\end{figure}
+
 \section{References}
 
 \end{document}
