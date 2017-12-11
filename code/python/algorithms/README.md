@@ -7,9 +7,9 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 	    											 
 ### Folder Organization
 
- -  htmls   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
+ -  [htmls](htmls)   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
          	    have been placed here as a demo.  
- - scrap-code     : Intermediate scrap code used in analysis 
+ - [scrap-code](scrap-code)     : Intermediate scrap code used in analysis - Clusterings which didn't give fruitful results / Time 
  - address_list_x : These files are address from geo-tags in json format. Since most service providers restrict
 	   		  decoding geo to address api limits to ~ 2000 calls per day, the decoded addresses have been cached 
 			  and kept in these files.
@@ -17,7 +17,7 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 
 ### Important Note
 
- - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebook has to be set to the downloaded path for the code to run correctly. 
+ - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebooks has to be set to the downloaded path for the code to run correctly. 
     	      
 ### Notebooks
 
