@@ -17,11 +17,11 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 
 ### Important Note
 
-     - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebook has to be set to the downloaded path for the code to run correctly. 
+ - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebook has to be set to the downloaded path for the code to run correctly. 
     	      
 ### Notebooks
 
-     - [Extended EDA for London](extended-eda-for-london.ipynb)	
-     - [Cluster Analysis for patterns in traffic](trends-in-traffic-busy-roads-london.ipynb)
-     - [HeatMap of Accidents which has been used for traffic correlation checks](london-heatmap.ipynb)
+ - [Extended EDA for London](extended-eda-for-london.ipynb)	
+ - [Cluster Analysis for patterns in traffic](trends-in-traffic-busy-roads-london.ipynb)
+ - [HeatMap of Accidents which has been used for traffic correlation checks](london-heatmap.ipynb)
 
