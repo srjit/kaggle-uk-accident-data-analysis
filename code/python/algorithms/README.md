@@ -16,10 +16,11 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 
 
 #### Dependencies
-  1) pandas
-  2) matplotlib
-  3) folium
-  4) json
+  1) pandas==0.21.0
+  2) matplotlib==2.0.2
+  3) folium==0.5.0
+  4) json==1.35
+  5) scikit-learn==0.19.1
 
      
 #### Important Note
