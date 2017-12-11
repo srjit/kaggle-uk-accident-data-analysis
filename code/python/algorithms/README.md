@@ -1,11 +1,11 @@
 
 ## Collection of analysis performed using Python :snake:
 
-### The data for the analysis is about 650 MBs and has been put in the google live location shared here
+#### The data for the analysis is about 650 MBs and has been put in the google live location shared here
     	
 https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing 
 	    											 
-### Folder Organization
+#### Folder Organization
 
  -  [htmls](htmls)   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
          	    have been placed here as a demo.  
@@ -15,11 +15,19 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
 			  and kept in these files.
 
 
-### Important Note
+#### Dependencies
+  1) pandas
+  2) matplotlib
+  3) folium
+  4) json
+
+     
+#### Important Note
 
  - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebooks has to be set to the downloaded path for the code to run correctly. 
-    	      
-### Notebooks
+
+   	      
+#### Notebooks
 
  - [Extended EDA for London](extended-eda-for-london.ipynb)	
  - [Cluster Analysis for patterns in traffic](trends-in-traffic-busy-roads-london.ipynb)
