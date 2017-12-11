@@ -11,10 +11,13 @@
  - [co-ordinates](sample-coordinates) : Collection of points, which are analysed later in 6 batches
     		    	  
 #### Dependencies
-  1) pandas
-  2) matplotlib
-  3) folium
-  4) json
+
+  1) pandas==0.21.0
+  2) matplotlib==2.0.2
+  3) folium==0.5.0
+  4) json==1.35
+  5) scikit-learn==0.19.1
+
   
 #### Notebook
   1) [Accidents - EDA](analysis-of-external-factors.ipynb)
