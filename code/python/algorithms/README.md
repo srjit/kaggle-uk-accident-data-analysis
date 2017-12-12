@@ -25,7 +25,7 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
      
 #### Important Note
 
- - This [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebooks has to be set to the downloaded path for the code to run correctly. 
+ - The [data](https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing) has to be downloaded and the variable *data_folder* in the notebooks has to be set to the downloaded path for the code to run correctly. 
 
    	      
 #### Notebooks

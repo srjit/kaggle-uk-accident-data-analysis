@@ -33,3 +33,8 @@
     * update-3  
       - documentation for final project update  
 
+## Running the code
+
+    * Every script is independent on its own. Make sure the dependencies mentioned in the
+      README files are installed 
+   	   

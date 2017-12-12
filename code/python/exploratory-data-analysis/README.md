@@ -1,4 +1,4 @@
-### Exploratory Data Analysis performed to understand attributes of the accident
+### Exploratory Data Analysis performed to understand attributes of the accident :snake:
 
 #### Folder Organization
 
