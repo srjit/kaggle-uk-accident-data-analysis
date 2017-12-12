@@ -159,27 +159,6 @@ As can be seen in Figure 12, the common important variable between these cluster
 A possible explanation for this could be the increase in speed limit as you head out of downtown London [Figure 13]. People going faster on wet roads would have a higher chance of losing control of their car. The accidents caused outside of Downtown London might be reduced if the speed limit was lowered in rainy months. \\
 
 
-\section{Variable clustering}
-There are many variables relating to road accident, which dramatically increases the difficulty in computation and interpretation. Moreover, many of these variables share similar characteristics and can be analyzed as a group. Therefore, it is important to examine the clustering properties of the variables. However it is challenging to perform cluserting on the variables as there exist both quantitative and qualitative variables. In this study, we applied a R package ClustOfVar to treat the mixtures of quantitative and qualitative variables [7]. With this method, we created two matrices to hold the quantitative and qualitative variables seperately. Dissimilarity matrix was calculated to homogenize variables into clusters. The homogeneity criterion of a cluster for the qualitative variables is defined as the sum of correlation ratios, and for quantitative variables as the sum of squared correlations. The centroids were obtained from the first principal component with the PCAMIX method. We also used a bootstrap approach to evaluate the suitable number of clusters.
-
-\begin{figure}[!htb]
-\minipage{0.32\textwidth}
-  \includegraphics[height=3.80cm, width=.9\linewidth]{Hierarchical cluster numbers evaluation.png}
-  \caption{Number of variables clustering analysis}\label{fig:hclust_number}
-\endminipage\hfill
-\minipage{0.32\textwidth}
-  \includegraphics[height=3.75cm, width=\linewidth]{Dendrogram of variable cluster.png}
-  \caption{Number of variables clustering analysis}\label{fig:hclust}
-\endminipage
-\end{figure}
-
-It is reasonable to determine there exist 3 clusters (Figure 13). The final variable cluster dendrogram was presented in Figure 13. The result generate three clusters of the variables, namely, cluster 1: Day of week, street light condition, weather condition, and road surface condition; cluster 2: special conditions at site, carriageway hazards,accident severity, number of vehicles, and number of casualities; and cluster 3: first road class, speed limit, road type, second road class, junction control, location easting OSGR, and location northing OSGR. These three clusters of variables maybe termed as: weather condition, accident condition, and road condition.
-
-\section{Conclusion}
-
-We have applied various unsupervised machine techniques to identify patterns of road accidents in the U.K. with particularly attention in London. We identified the association of police attend and number of involving vehicles in the accidents. We have identified three clusters of variables relating to the road accidents. We also have identified four clusters of the occurrences of road accidents in London and further suggested several solutions to reduce the occurrence rate. 
-
-Our analysis could be improved in many ways. We suggested several future ideas. The first idea is to link the traffic flow data with the road accident data for better pattern recognition. The second idea is to incorporate the socio-demographic factors into our analysis. For example, it might be enlightening to evaluate the population change, migration and economy to examine road accident. And thirdly, it is useful to create interactive visualizations of pattern recognition.
 
 \section{References}
  [1] \href{https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london}{London Shapefile}
