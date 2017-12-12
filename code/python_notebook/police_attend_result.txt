@@ -1,0 +1,27 @@
+{Police_Force > 30, Police_Officer_Attend = Yes}
+{Accident_Severity = 2, Police_Officer_Attend = Yes}
+{Accident_Severity = 3, Police_Officer_Attend = Yes}
+{Number_of_Vehicles = 1, Police_Officer_Attend = Yes}
+{Number_of_Vehicles >= 3, Police_Officer_Attend = Yes}
+{Number_of_Casualties = 2, Police_Officer_Attend = Yes}
+{Number_of_Casualties >= 3, Police_Officer_Attend = Yes}
+{1st_Road_Class <= 4, Police_Officer_Attend = Yes}
+{Road_Type = 'Single carriageway', Police_Officer_Attend = Yes}
+{Road_Type = 'Dual carriageway', Police_Officer_Attend = Yes}
+{Speed_limit >= 30, Police_Officer_Attend = Yes}
+{2nd_Road_Class = -1, Police_Officer_Attend = Yes}
+{2nd_Road_Class = 1, Police_Officer_Attend = Yes}
+{2nd_Road_Class = 3, Police_Officer_Attend = Yes}
+{2nd_Road_Class = 5, Police_Officer_Attend = Yes}
+{Pedestrian_Crossing-Human_Control = 'None within 50 metres', Police_Officer_Attend = Yes}
+{Pedestrian_Crossing-Physical_Facilities = 'No physical crossing within 50 meters', Police_Officer_Attend = Yes}
+{Pedestrian_Crossing-Physical_Facilities = 'Central refuge', Police_Officer_Attend = Yes}
+{Light_Conditions = 'Darkness: Street lights present and lit', Police_Officer_Attend = Yes}
+{Light_Conditions = 'Darkness: Street lights present but unlit', Police_Officer_Attend = Yes}
+{Light_Conditions = 'Darkeness: No street lighting', Police_Officer_Attend = Yes}
+{Weather_Conditions != 'Fine without high winds', Police_Officer_Attend = Yes}
+{Road_Surface_Conditions = 'Wet/Damp', Police_Officer_Attend = Yes}
+{Road_Surface_Conditions = 'Frost/Ice', Police_Officer_Attend = Yes}
+{Road_Surface_Conditions = 'Flood (Over 3cm of water)', Police_Officer_Attend = Yes}
+{Carriageway_Hazards != 'None' && 'Pedestrian in carriageway (not injured)', Police_Officer_Attend = Yes}
+{Urban_or_Rural_Area = 2, Police_Officer_Attend = Yes}
