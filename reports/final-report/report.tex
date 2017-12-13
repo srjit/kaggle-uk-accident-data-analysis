@@ -39,7 +39,7 @@ isolating and understanding urban cites where most accidents are concentrated, t
 \subsection{The Dataset}
 We consider the accident data from years 2009 to 2014 for our experiments. Every record of an accident includes the location (in geographical co-ordinates), the type of area, and the date and time of the accident. In addition, it includes the speed of the vehicle, the severity, the number of officers attended, the number of casualties, the weather conditions, the road and lighting conditions during the accident. \\
 
-Furthermore, to understand the flow of traffic, we are given the Annual Average Daily Flow data that tracks the amount of traffic which are present on the roads in the UK, at different points of time. \\
+Furthermore, to understand the flow of traffic, we are given the Annual Average Daily Flow data that tracks the amount of traffic which is present on the roads in the UK, at different points in time. \\
 
 \section{Exploring our data}
 We begin our analysis, identifying the areas where accident concentrations are the highest. The towns/cities where the accident occurred were identified by decoding the geo-tags, and the top 200 places where the concentration is the highest were isolated. The records from these 200 places were tagged on a map to see the spread of hotspots. As we can see from the map, these hotspots are centered around the main cities in the UK.
@@ -55,7 +55,7 @@ We begin our analysis, identifying the areas where accident concentrations are t
 
 These regions, which we have identified to be the hotspots are also the highest populated cities[1], as well as the most traffic dense regions in the UK(Appendix, Fig 1). \\
 
-Looking into the summary statistics of the data, we realized that most accidents occur leaving at least one casualty. Most accidents involve two vehicles, or a pedestrian and a vehicle. It is also noteworthy that the accidents are neither decreasing nor increasing consistently during the years under consideration. The numbers of accidents in a year stays around 150000, with  an increase of over 175000 in 2012 (Figure 1). We could also see that the number of accidents peak during the hours from 5.00pm to 6.00pm and between 8.00am to 9.00 am (Figure 2). These are typically the hours when people commute to their workplace and back home. This could be an early indicator that the increase in traffic could be a significant cause of the number of accidents, or rather the roads are not well equipped to contain it. \\
+Looking into the summary statistics of the data, we realized that most accidents occur leaving at least one casualty. Most accidents involve two vehicles, or a pedestrian and a vehicle. It is also noteworthy that the accidents are neither decreasing nor increasing consistently during the years under consideration. The numbers of accidents in a year stays around 150000, with  an increase of over 175000 in 2012 (Figure 1). We could also see that the number of accidents are at peak during the hours from 5.00pm to 6.00pm and between 8.00am to 9.00 am (Figure 2). These are typically the hours when people commute to their workplace and back home. This could be an early indicator that the increase in traffic could be a significant cause of the number of accidents, or rather the roads are not well equipped to contain it. \\
 
 \begin{figure}[!htb]
 \minipage{0.32\textwidth}
@@ -72,7 +72,7 @@ Looking into the summary statistics of the data, we realized that most accidents
 \endminipage
 \end{figure}
 
-Considering that there are UK has four distinct seasons with significant variations in climate, we were inclined to check the possibility of skew in the distribution of accidents across seasons
+Considering that UK has four different seasons with significant variations in climate, we were inclined to check the possibility of skew in the distribution of accidents across seasons
 and light conditions. \\
 
 \begin{figure}[!htb]
@@ -94,7 +94,7 @@ Moving forward from this point, we narrowed our focus to metropolitan cities in 
 \subsection{Investigation of Patterns in Traffic - London}
 Streets in the UK are uniquely identified by an alpha-numeric numbering scheme[6]. Concatenating this identifier with the Northing and Easting co-ordinates makes a good marker for us to uniquely identify an accident spot or a street fragment without losing information about the street. The Annual Average Daily Flow (AADF) of traffic was analyzed to cluster the traffic dense regions in London. \\
 
-Road fragments with similar characteristics in traffic were identified though cluster analysis. \textit{K-means} was our candidate algorithm. Variables that quantify traffic of a region were manually selected, which included number of motor cycles, number of taxis, and the number bus coaches. The  experiment was performed with same parameters for every year between 2009 and 2014 to study the variations in areas with high traffic density. \textit{Silhouette method} was used to determine the optimal number of clusters, which was discovered to be two (Appendix:Figure 11).\\
+Road fragments with similar characteristics in traffic were identified through cluster analysis. \textit{K-means} was our candidate algorithm. Variables that quantify traffic of a region were manually selected, which included number of motor cycles, number of taxis, and the number bus coaches. The  experiment was performed with same parameters for every year between 2009 and 2014 to study the variations in areas with high traffic density. \textit{Silhouette method} was used to determine the optimal number of clusters, which was discovered to be two (Appendix:Figure 11).\\
 
 Examining the clusters, we could see that the density of traffic in spots belonging to one of the clusters is very high compared to the ones in the second cluster. The co-ordinates of points belonging to this cluster was dropped on a map and it turns out that they are very close to each other - They collectively represent larger road fragments where the traffic is the highest. We plotted yearly heatmaps of accidents to study how they correlate with the traffic flow plots. It can be observed that there is a positive correlation between the hotspots where traffic density is the highest, and the number of accidents. In other words, the high traffic flow zones in London are also accident prone areas. To illustrate this at one of the locations, consider the map segment which shows the traffic flow density on street A41 between Edgware Road(Circle District and Hammersmith \& City) and Baker Street[Figure 5: Left]. The right end of figure 5 shows the heatmap of accidents in the same fragment. This is a good indication that the traffic dense fragments are not equipped enough to contain the traffic. \\
 
@@ -147,7 +147,7 @@ We clustered the accidents based on Road Surface Conditions, Carriageway Hazards
     \end{center}
 \end{figure}
 
-Visualizing a few data points from each cluster, it can be seen that the Light Conditions and Road Surface Conditions variables have been given importance by the clustering algorithm, and the four clusters are four combinations of these two variables. The accidents belonging to each cluster plotted on maps are shown above(Figure 8). \\ 
+Visualizing a few data points from each cluster, it can be seen that the variables \textit{Light Conditions} and \textit{Road Surface Conditions}  have been given importance by the clustering algorithm, and the four clusters are four combinations of these two variables. The accidents belonging to each cluster plotted on maps are shown above(Figure 8). \\ 
 
 
 
@@ -159,7 +159,7 @@ As can be seen in (Appendix:Figure 13), the common important variable between th
 A possible explanation for this could be the increase in speed limit as we head out of Downtown London (Appendix: Figure 14). People going faster on wet roads would have a much higher chance of losing control of their car as compared to people going slower on wet roads. \\
 
 \section{Discussion}
-Looking at the results of our analysis, we see that certain road fragments on the roads of London, are particularity traffic dense. These same spots are highly accident prone, indicating that these roads are not equipped to handle the amount of traffic that they get. We further observed that wet or damp roads have a higher chance of causing an accident as you move away the heart of the city, which can be explained by the higher speed limit at the outskirts of the city. The clusters show that the risk that comes with driving fast on wet/damp roads is much higher than the risk associated with driving fast on dry roads. \\
+Looking at the results of our analysis, we see that certain road fragments on the roads of London, are particularity traffic dense. These same spots are highly accident prone, indicating that these roads are not equipped to handle the amount of traffic that they get. We further observed that wet or damp roads have a higher chance of causing an accident, as people move away from the center of the city. This can be explained by the higher speed limit at the outskirts of the city. The clusters show that the risk that comes with driving fast on wet/damp roads is much higher than the risk associated with driving fast on dry roads. \\
 
 Based on our observations, we propose the following in the roads of London.  These suggestions will potentially be able to reduce the number of accidents that happen in the Greater London area:
 
