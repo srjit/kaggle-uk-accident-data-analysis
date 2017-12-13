@@ -1,5 +1,8 @@
 ### Exploratory Data Analysis performed to understand attributes of the accident :snake:
 
+#### Author
+ - Sreejith Sreekumar
+     	         		
 #### Folder Organization
 
  -  [htmls](htmls)   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
@@ -18,6 +21,7 @@
   4) json==1.35
   5) scikit-learn==0.19.1
 
+  - A requirements.txt file has been added in the folder. Please use ``` pip install -r requirements.txt ``` for installing the requirements     
   
 #### Notebook
   1) [Accidents - EDA](analysis-of-external-factors.ipynb)

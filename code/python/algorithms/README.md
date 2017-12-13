@@ -1,6 +1,9 @@
 
 ## Collection of analysis performed using Python :snake:
 
+#### Author
+ - Sreejith Sreekumar   	      
+
 #### The data for the analysis is about 650 MBs and has been put in the google live location shared here
     	
 https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sharing 
@@ -22,6 +25,8 @@ https://drive.google.com/drive/folders/1Z7ZZFldy-XB1koU3JPW7oTQqs-jPGPMD?usp=sha
   4) json==1.35
   5) scikit-learn==0.19.1
 
+ - A requirements.txt file has been added in the folder. Please use ``` pip install -r requirements.txt ``` for installing the requirements   
+     
      
 #### Important Note
 
