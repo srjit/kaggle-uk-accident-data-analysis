@@ -1,5 +1,7 @@
 ### Exploratory Data Analysis performed to understand attributes of the accident :snake:
 
+#### Author: Sreejith Sreekumar
+     	         		
 #### Folder Organization
 
  -  [htmls](htmls)   	  : Since the map outputs do not render on github, html output documents of previous successful runs  
