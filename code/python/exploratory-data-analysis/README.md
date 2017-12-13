@@ -21,6 +21,7 @@
   4) json==1.35
   5) scikit-learn==0.19.1
 
+  - A requirements.txt file has been added in the folder. Please use ``` pip install -r requirements.txt ``` for installing the requirements     
   
 #### Notebook
   1) [Accidents - EDA](analysis-of-external-factors.ipynb)
