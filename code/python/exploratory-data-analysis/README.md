@@ -1,6 +1,7 @@
 ### Exploratory Data Analysis performed to understand attributes of the accident :snake:
 
-#### Author: Sreejith Sreekumar
+#### Author
+ - Sreejith Sreekumar
      	         		
 #### Folder Organization
 

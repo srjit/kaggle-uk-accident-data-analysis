@@ -1,7 +1,8 @@
 
 ## Collection of analysis performed using Python :snake:
 
-#### Author: Sreejith Sreekumar   	      
+#### Author
+ - Sreejith Sreekumar   	      
 
 #### The data for the analysis is about 650 MBs and has been put in the google live location shared here
     	
